@@ -3,15 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>cac71ff0-4ed8-47d0-9850-047573e4d5bc</ProjectGuid>
+    <ProjectGuid>698ae711-5ee6-40a8-8823-84bf381e0df6</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>baaard.py</StartupFile>
+    <StartupFile>FahrenheidToCelsius.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
-    <Name>baaard</Name>
-    <RootNamespace>baaard</RootNamespace>
+    <Name>FahrenheidToCelsius</Name>
+    <RootNamespace>FahrenheidToCelsius</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,7 +22,7 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="baaard.py" />
+    <Compile Include="FahrenheidToCelsius.py" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
