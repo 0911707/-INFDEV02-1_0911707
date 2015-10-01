@@ -1,114 +1,63 @@
 ﻿from random import randint
 while True:
-    choice = raw_input("Do you choose rock, paper, scissors, lizard or spock? (press Q to quit) ")
+    choice = raw_input("Do you choose rock, paper, scissors, lizard or spock? (press Q to quit)\n")
     computer = randint(0, 4)
+
     if (choice == "q") or (choice == "Q"):
         break
-        
-    if (choice == "rock") and (computer == 0):
-        print("")
-        print("The computer chooses scissors, rock crushes scissors, you win!")
-        print("")
-    elif(choice =="rock") and (computer == 1):
-        print("")
-        print ("The computer also chooses rock, it's a tie")
-        print("")
-    elif(choice =="rock") and (computer == 2):
-        print("")
-        print ("The computer chooses paper, paper covers rock, you lost from a inanimate object, N00B!")
-        print("")
-    elif(choice =="rock") and (computer == 3):
-        print("")
-        print ("The computer chooses lizard, rock crushes lizard, you win!")
-        print("")
-    elif(choice =="rock") and (computer == 4):
-        print("")
-        print ("The computer chooses spock, spock vaporizes rock, you lost")
-        print("")
 
-    elif(choice =="scissors") and (computer == 0):
-        print("")
-        print ("The computer also chooses scissors, it's a tie")
-        print("")
-    elif(choice =="scissors") and (computer == 1):
-        print("")
-        print ("The computer chooses rock, rock crushes scissors, you lost from a inanimate object, N00B!")
-        print("")
-    elif(choice =="scissors") and (computer == 2):
-        print("")
-        print ("The computer chooses paper, scissors cuts paper, you win!")
-        print("")
-    elif(choice =="scissors") and (computer == 3):
-        print("")
-        print ("The computer chooses lizard, scissors decapitates lizard, you win!")
-        print("")
-    elif(choice =="scissors") and (computer == 4):
-        print("")
-        print ("The computer chooses spock, spock crushes scissors, you lost")
-        print("")
-
-    elif(choice =="paper") and (computer == 0):
-        print("")
-        print ("The computer chooses scissors, scissors beats paper, you lost from a inanimate object, N00B!")
-        print("")
-    elif(choice =="paper") and (computer == 1):
-        print("")
-        print ("The computer chooses rock, paper beats rock, you win!")
-        print("")
-    elif(choice =="paper") and (computer == 2):
-        print("")
-        print ("The computer chooses paper, it's a tie")
-        print("")
-    elif(choice =="paper") and (computer == 3):
-        print("")
-        print ("The computer chooses lizard, lizard eats paper, you lose")
-        print("")
-    elif(choice =="paper") and (computer == 4):
-        print("")
-        print ("The computer chooses spock, paper disproves spock, you win!")
-        print("")
-
-    elif(choice =="lizard") and (computer == 0):
-        print("")
-        print ("The computer chooses scissors ")
-        print("")
-    elif(choice =="lizard") and (computer == 1):
-        print("")
-        print ("The computer chooses rock ")
-        print("")
-    elif(choice =="lizard") and (computer == 2):
-        print("")
-        print ("The computer chooses paper ")
-        print("")
-    elif(choice =="lizard") and (computer == 3):
-        print("")
-        print ("The computer chooses lizard ")
-        print("")
-    elif(choice =="lizard") and (computer == 4):
-        print("")
-        print ("The computer chooses spock ")
-        print("")
-
-    elif(choice =="spock") and (computer == 0):
-        print("")
-        print ("The computer chooses scissors, spock crushes scissors, you win!")
-        print("")
-    elif(choice =="spock") and (computer == 1):
-        print("")
-        print ("The computer chooses rock, spock vaporizes rock, you win!")
-        print("")
-    elif(choice =="spock") and (computer == 2):
-        print("")
-        print ("The computer chooses paper, paper disproves spock, you lose")
-        print("")
-    elif(choice =="spock") and (computer == 3):
-        print("")
-        print ("The computer chooses lizard, lizard poisons spock, you lose")
-        print("")
-    elif(choice =="spock") and (computer == 4):
-        print("")
-        print ("The computer chooses spock, it's a tie ")
-        print("")
+    if computer == 0:
+        print ("The computer chooses scissors\n")
+        x = "scissors"
+    elif computer == 1:
+        print ("The computer chooses rock\n")
+        x = "rock"
+    elif computer == 2:
+        print ("The computer chooses paper\n")
+        x = "paper"
+    elif computer == 3:
+        print ("The computer chooses lizard\n")
+        x = "lizard"
     else:
-        print("that is not possible, try again")
-        
+        print ("The computer chooses Spock\n")
+        x = "Spock"
+
+    if choice == "rock":
+        y = "rock"
+    elif choice =="paper":
+        y = "paper"
+    elif choice =="scissors":
+        y = "scissors"
+    elif choice == "lizard":
+        y = "lizard"
+    elif choice == "Spock":
+        y = "Spock"
+    elif (choice == "q") or (choice == "Q"):
+        break
+    else:
+        y = choice
+    
+    if (choice == "rock" and computer == 0) or (choice == "scissors" and computer == 2) or (choice == "paper" and computer == 1) or (choice == "rock" and computer == 3) or (choice == "scissors" and computer == 3) or (choice == "paper" and computer == 4) or (choice == "lizard" and computer == 2) or (choice == "lizard" and computer == 4) or (choice =="spock" and computer == 0) or (choice == "spock" and computer == 1):
+        print(y + " beats " + x  + ", you win!\n")
+    elif (choice == "rock" and computer == 1) or (choice == "scissors" and computer == 0) or (choice == "paper" and computer == 2) or (choice =="lizard" and computer == 3) or (choice == "spock" and computer == 4):
+        print(x + " ties with " + y + ", it's a tie\n")
+    elif (choice == "rock" and computer == 2) or (choice == "rock" and computer == 4) or (choice == "scissors" and computer == 1) or (choice == "scissors" and computer == 4) or (choice == "paper" and computer == 0) or (choice == "paper" and computer == lizard) or (choice == "lizard" and computer == 0) or (choice == "lizard" and computer == 1) or (choice == "spock" and computer == 2) or (choice == "spock" and computer == 3):
+        print(x + " beats " + y + ", you lose\n")
+    else:
+        print(y + " is not valid, please try again")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
