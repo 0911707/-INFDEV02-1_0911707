@@ -1,24 +1,21 @@
-input = raw_input("how big do you want your hollow square: ")
+﻿input = raw_input("how big do you want your hollow square: ")
 output = ""
-x = 0
+
+i = 0
 
 try:
-    x = int(input)
+    i = int(input)
 except ValueError:
     print("that's not a number")
 
-y = int(x)
+j = int(i)
 
-for i in range(x):
-    for j in range(x):
-        if j == 0:
-            for k in range(x):
-                output = output + "*",
-                output = output + "\n"
-        elif j == (x - 1):
-            for l in range(x):
-                output += "*"
+for x in range(i):
+    for y in range(j):
+        if (x == 0) or (y == 0) or (x == (i - 1)) or (y == (j - 1)):
+            output += "*"
         else:
-            for m in range(x):
-                output + "x",
+            output += " "
+    output += "\n"
+print(output)
 
