@@ -1,11 +1,11 @@
-class Tyre:
+﻿class Tyre:
     def __init__(self, presure, size):
         self.presure = presure
         self.size = size
 
 class Wheel:
-    def __init__(self, Tyre):
-        self.wheel = Tyre
+    def __init__(self, brand):
+        self.wheel = brand
 
 class Engine:
     def __init__(self, capacity, power):
@@ -27,11 +27,14 @@ class Person:
         self.length = length
 
 class Car:
-    def __init__(self, Wheel, Engine, Seat, Light, Person):
-        self.Wheel = Wheel
-        self.Engine = Engine
-        self.Seat = Seat
-        self.Light = Light
-        self.Person = Person
+    def __init__(self, presure, size, brand, capacity, power , height, watt, gender, age, length):
+        self.Tyre = Tyre(presure, size)
+        self.Wheel = Wheel(brand)
+        self.Engine = Engine(capacity, power)
+        self.Seat = Seat(height)
+        self.Light = Light(watt)
+        self.Person = Person(gender, age, length)
 
-bmw = Car()
+bmw = Car("bmw" , 1.5, 24, "v8", 500, 1.80, 20, "man", 17, 1.80)
+print(bmw.Engine.power)
+
