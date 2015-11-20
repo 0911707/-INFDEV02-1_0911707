@@ -5,7 +5,7 @@
 
 class Wheel:
     def __init__(self, brand):
-        self.wheel = brand
+        self.brand = brand
 
 class Engine:
     def __init__(self, capacity, power):
@@ -35,6 +35,16 @@ class Car:
         self.Light = Light(watt)
         self.Person = Person(gender, age, length)
 
-bmw = Car("bmw" , 1.5, 24, "v8", 500, 1.80, 20, "man", 17, 1.80)
+bmw = Car(1.5, 24, "bmw", "v8", 500, 1.80, 20, "man", 17, 1.80)
+print(bmw.Tyre.presure)
+print(bmw.Tyre.size)
+print(bmw.Wheel.brand)
+print(bmw.Engine.capacity)
 print(bmw.Engine.power)
+print(bmw.Seat.height)
+print(bmw.Light.watt)
+print(bmw.Person.gender)
+print(bmw.Person.age)
+print(bmw.Person.length)
+
 
